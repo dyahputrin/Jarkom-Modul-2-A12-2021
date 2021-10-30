@@ -336,7 +336,7 @@ dan lakukan unzip
 
 ```unzip super.franky.zip```
 
-Rename folder franky menjadi franky.a12.com
+Rename folder franky menjadi super.franky.a12.com
 ``` mv super.franky super.franky.a12.com ```
 
 
@@ -361,14 +361,126 @@ buka super.franky.a12.com dengan menggunakan lynx
 
 Akan tetapi, pada folder /public, Luffy ingin hanya dapat melakukan directory listing saja.
 
+**Jawaban**
+
+__pada console skype__ 
+ ketikan : ```cd /etc/apache2/sites-available``` untuk pindah ke directory tersebut
+ 
+ di directory tersebut edit file super.franky.a12.com.conf
+ ```vim super.franky.a12.com.conf``` seperti gambar berikut :
+ ![image](https://user-images.githubusercontent.com/81466736/139533051-76ea3157-d490-459f-8cf5-e8f809bcd92d.png)
+ 
+ lakukan restart pada apache
+
+``` service apache2 restart ```
+
+buka super.franky.a12.com/public dengan menggunakan lynx
+
+```lynx super.franky.a12.com/public```
+
+![image](https://user-images.githubusercontent.com/81466736/139533138-54a0f68c-23e5-40b4-9981-274a427bdd9a.png)
 
 
+dan kemudian coba untuk membuka lynx ```super.franky.a12.com/public/css``` dan kemudian /js lalu /images
+
+![image](https://user-images.githubusercontent.com/81466736/139533227-cc19f48a-c4e6-4d76-b5f0-1f0258f1398b.png)
 
 
+## Soal 12
+
+Tidak hanya itu, Luffy juga menyiapkan error file 404.html pada folder /error untuk mengganti error kode pada apache 
+
+**Jawaban**
+
+__pada console skype__ 
+ ketikan : ```cd /etc/apache2/sites-available``` untuk pindah ke directory tersebut
+ 
+ di directory tersebut edit file super.franky.a12.com.conf
+ ```vim super.franky.a12.com.conf``` seperti gambar berikut :
+ ![12_conf](https://user-images.githubusercontent.com/81466736/139533397-1ff3af9c-5b62-4977-ac96-3d207fd2b0f9.JPG)
+
+lakukan restart pada apache
+
+``` service apache2 restart ```
+
+buka super.franky.a12.com/pubji dengan menggunakan lynx maka akan menampilkan pesan error 404
+
+``` lynx super.franky.a12.com/pubji ```
+![image](https://user-images.githubusercontent.com/81466736/139533498-6ea11eca-22a5-445c-ac9a-881155d15d45.png)
+
+## Soal 13
+Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host ini bertujuan untuk dapat mengakses file asset www.super.franky.yyy.com/public/js menjadi www.super.franky.yyy.com/js.
+**Jawaban**
+
+__pada console skype__ 
+ ketikan : ```cd /etc/apache2/sites-available``` untuk pindah ke directory tersebut
+ 
+ di directory tersebut edit file super.franky.a12.com.conf
+ ```vim super.franky.a12.com.conf``` seperti gambar berikut :
+![13_conf](https://user-images.githubusercontent.com/81466736/139533584-a297e5af-2a8c-40d3-8117-a2a1d538f612.JPG)
+
+  lakukan restart pada apache
+
+``` service apache2 restart ```
+
+buka super.franky.a12.com/js dengan menggunakan lynx
+
+```lynx super.franky.a12.com/js```
+
+![image](https://user-images.githubusercontent.com/81466736/139533666-e986e179-eadf-4b88-8d47-e822cae62fa8.png)
+
+## Soal 14
+
+Dan Luffy meminta untuk web www.general.mecha.franky.yyy.com hanya bisa diakses dengan port 15000 dan port 15500
+
+**Jawaban**
+
+__pada console skype__ 
+masuk ke dalam directory :
+
+```cd /etc/apache2/sites-available.```
 
 
+Copy file 000-default.conf dan ubah nama menjadi file general.mecha.franky.a12.com.conf.
+
+```cp 000-default.conf general.mecha.a12.com.conf```
+
+Edit file general.mecha.franky.a12.com.conf seperti gambar berikut ini:
+
+``` vim general.mecha.franky.a12.com.conf ```
+
+![image](https://user-images.githubusercontent.com/81466736/139533876-d59b5eeb-a299-487b-b15e-8101b6721bc6.png)
 
 
+Edit file /etc/apache2/ports.conf untuk dapat mengaktifkan port 15000 dan port 15500 dan membuat comment pada port 80 seperti pada gambar berikut:
+``` vim /etc/apache2/ports.conf ```
+
+![image](https://user-images.githubusercontent.com/81466736/139533914-18740004-524f-4c61-a111-7bfe3a3a03be.png)
 
 
+pada directory /var/www.
+```cd /var/www.```
+
+Download file zip yang telah diberikan : ```wget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/general.mecha.franky.zip```
+dan lakukan unzip 
+
+```unzip general.mecha.franky.zip```
+
+Rename folder franky menjadi general.mecha.franky.a12.com
+```mv general.mecha.franky general.mecha.franky.a12.com ```
+
+
+Aktifkan konfigurasi pada general.mecha.franky.a12.com dengan command:
+
+```a2ensite general.mecha.franky.a12.com```
+
+lakukan restart pada apache
+
+``` service apache2 restart ```
+
+__pada Loguetown__
+
+buka general.mecha.franky.a12.com dengan menggunakan lynx
+
+![image](https://user-images.githubusercontent.com/81466736/139534083-9964e4e3-7879-4088-af73-7d2de311929f.png)
 
