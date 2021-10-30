@@ -232,6 +232,7 @@ Edit file franky.a12.com.conf seperti gambar berikut ini:
 ![image](https://user-images.githubusercontent.com/81466736/139534155-402f19e9-d899-458c-9cb5-a3e69adad284.png)
 
 pada directory /var/www.
+
 ```cd /var/www.```
 
 Download file zip yang telah diberikan : ```https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/franky.zip```
@@ -240,6 +241,7 @@ dengan menggunakan wget ``` apt-get install wget -y ``` dan lakukan zip ``` apt-
 ```unzip franky.zip```
 
 Rename folder franky menjadi franky.a12.com
+
 ``` mv franky franky.a12.com ```
 
 
@@ -254,6 +256,7 @@ lakukan restart pada apache
 __pada Loguetown__
 
 install aplikasi lynx
+
 ``` apt-get install lynx ```
 
 buka franky.a12.com dengan menggunakan lynx
@@ -272,7 +275,9 @@ Setelah itu, Luffy juga membutuhkan agar url www.franky.yyy.com/index.php/home d
 __Pada Skypie__
 
 tuliskan command 
+
 ```a2enmod rewrite``` 
+
 untuk dapat mengaktifkan module rewrite.
 
 
@@ -280,11 +285,13 @@ Restart apache dengan command
 ```service apache2 restart.```
 
 buat dan edit file baru .htaccess di folder /var/www/franky.a12.com seperti berikut :
+
 ```vim /var/www/franky.a12.com/.htaccess```
 
 ![image](https://user-images.githubusercontent.com/81466736/139532385-15eb6170-8203-40f3-be27-c97a0e248f73.png)
 
 pada directory 
+
 ```/etc/apache2/sites-available.```
 
 edit file franky.a12.com.conf dan tambahkan beberapa line sebagai berikut agar file .htaccess yang tadi dibuat dapat diakses:
@@ -293,6 +300,7 @@ edit file franky.a12.com.conf dan tambahkan beberapa line sebagai berikut agar f
 ![image](https://user-images.githubusercontent.com/81466736/139532491-f5dc214f-1943-432d-841c-ead6a4851679.png)
 
 Restart apache dengan command 
+
 ```service apache2 restart.```
 
 __pada Loguetown__
@@ -311,6 +319,7 @@ Setelah itu, pada subdomain www.super.franky.yyy.com, Luffy membutuhkan penyimpa
 **Jawaban**
 
 __pada console skype__ 
+
 masuk ke dalam directory :
 
 ```cd /etc/apache2/sites-available.```
@@ -328,6 +337,7 @@ Edit file super.franky.a12.com.conf seperti gambar berikut ini:
 
 
 pada directory /var/www.
+
 ```cd /var/www.```
 
 Download file zip yang telah diberikan : ```hwget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/super.franky.zip```
@@ -336,6 +346,7 @@ dan lakukan unzip
 ```unzip super.franky.zip```
 
 Rename folder franky menjadi super.franky.a12.com
+
 ``` mv super.franky super.franky.a12.com ```
 
 
@@ -366,8 +377,10 @@ __pada console skype__
  ketikan : ```cd /etc/apache2/sites-available``` untuk pindah ke directory tersebut
  
  di directory tersebut edit file super.franky.a12.com.conf
- ```vim super.franky.a12.com.conf``` seperti gambar berikut :
- ![image](https://user-images.githubusercontent.com/81466736/139533051-76ea3157-d490-459f-8cf5-e8f809bcd92d.png)
+
+```vim super.franky.a12.com.conf``` seperti gambar berikut :
+
+![image](https://user-images.githubusercontent.com/81466736/139533051-76ea3157-d490-459f-8cf5-e8f809bcd92d.png)
  
  lakukan restart pada apache
 
@@ -395,8 +408,10 @@ __pada console skype__
  ketikan : ```cd /etc/apache2/sites-available``` untuk pindah ke directory tersebut
  
  di directory tersebut edit file super.franky.a12.com.conf
- ```vim super.franky.a12.com.conf``` seperti gambar berikut :
- ![12_conf](https://user-images.githubusercontent.com/81466736/139533397-1ff3af9c-5b62-4977-ac96-3d207fd2b0f9.JPG)
+
+```vim super.franky.a12.com.conf``` seperti gambar berikut :
+
+![12_conf](https://user-images.githubusercontent.com/81466736/139533397-1ff3af9c-5b62-4977-ac96-3d207fd2b0f9.JPG)
 
 lakukan restart pada apache
 
@@ -405,6 +420,7 @@ lakukan restart pada apache
 buka super.franky.a12.com/pubji dengan menggunakan lynx maka akan menampilkan pesan error 404
 
 ``` lynx super.franky.a12.com/pubji ```
+
 ![image](https://user-images.githubusercontent.com/81466736/139533498-6ea11eca-22a5-445c-ac9a-881155d15d45.png)
 
 ## Soal 13
@@ -412,10 +428,13 @@ Luffy juga meminta Nami untuk dibuatkan konfigurasi virtual host. Virtual host i
 **Jawaban**
 
 __pada console skype__ 
- ketikan : ```cd /etc/apache2/sites-available``` untuk pindah ke directory tersebut
+
+ketikan : ```cd /etc/apache2/sites-available``` untuk pindah ke directory tersebut
  
  di directory tersebut edit file super.franky.a12.com.conf
- ```vim super.franky.a12.com.conf``` seperti gambar berikut :
+
+```vim super.franky.a12.com.conf``` seperti gambar berikut :
+
 ![13_conf](https://user-images.githubusercontent.com/81466736/139533584-a297e5af-2a8c-40d3-8117-a2a1d538f612.JPG)
 
   lakukan restart pada apache
@@ -452,12 +471,14 @@ Edit file general.mecha.franky.a12.com.conf seperti gambar berikut ini:
 
 
 Edit file /etc/apache2/ports.conf untuk dapat mengaktifkan port 15000 dan port 15500 dan membuat comment pada port 80 seperti pada gambar berikut:
+
 ``` vim /etc/apache2/ports.conf ```
 
 ![image](https://user-images.githubusercontent.com/81466736/139533914-18740004-524f-4c61-a111-7bfe3a3a03be.png)
 
 
 pada directory /var/www.
+
 ```cd /var/www.```
 
 Download file zip yang telah diberikan : ```wget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/general.mecha.franky.zip```
@@ -466,6 +487,7 @@ dan lakukan unzip
 ```unzip general.mecha.franky.zip```
 
 Rename folder franky menjadi general.mecha.franky.a12.com
+
 ```mv general.mecha.franky general.mecha.franky.a12.com ```
 
 
@@ -479,7 +501,13 @@ lakukan restart pada apache
 
 __pada Loguetown__
 
-buka general.mecha.franky.a12.com dengan menggunakan lynx
+buka general.mecha.franky.a12.com:15000 dengan menggunakan lynx
 
 ![image](https://user-images.githubusercontent.com/81466736/139534083-9964e4e3-7879-4088-af73-7d2de311929f.png)
 
+
+
+## Kendala
+ pada soal nomor 15 tidak dapat memasukkan new password untuk username luffy
+ 
+ masih sering terjadi error sehingga sering mengulang konfigurasi dari awal dan tidak sempat mengerjakan nomor 16 dan 17
