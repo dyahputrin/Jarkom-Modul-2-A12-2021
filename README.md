@@ -229,8 +229,7 @@ Copy file 000-default.conf dan ubah nama menjadi file franky.a12.com.conf.
 
 Edit file franky.a12.com.conf seperti gambar berikut ini:
 
-![8_1](https://user-images.githubusercontent.com/81466736/139531820-81fe9e90-f5f9-4eb4-8cbf-d8655fa08427.JPG)
-
+![image](https://user-images.githubusercontent.com/81466736/139534155-402f19e9-d899-458c-9cb5-a3e69adad284.png)
 
 pada directory /var/www.
 ```cd /var/www.```
@@ -342,7 +341,7 @@ Rename folder franky menjadi super.franky.a12.com
 
 Aktifkan konfigurasi pada franky.a12.com dengan command:
 
-```a2ensite franky.a12.com```
+```a2ensite super.franky.a12.com```
 
 lakukan restart pada apache
 
