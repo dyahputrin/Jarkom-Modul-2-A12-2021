@@ -202,6 +202,165 @@ Buat subdomain melalui Water7 dengan nama general.mecha.franky.yyy.com dengan al
 ![Screenshot (1921)](https://user-images.githubusercontent.com/71380876/139353323-41ff19fc-01d3-480b-a8c9-c5644d2c874b.png)
 
 
+## Soal 8
+
+Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pertama dengan webserver www.franky.yyy.com. Pertama, luffy membutuhkan webserver dengan DocumentRoot pada /var/www/franky.yyy.com.
+
+**Jawaban**
+
+__pada console skype__ Install aplikasi apache, PHP, dan libapache2-mod-php7.0.
+
+lakukan ```apt-get update``` sebelumnya, lalu install aplikasi di atas
+
+```apt-get install apache2 -y```
+
+```apt-get install php -y```
+
+```apt-get install libapache2-mod-php7.0 -y```
+
+masuk ke dalam directory :
+
+```cd /etc/apache2/sites-available.```
+
+
+Copy file 000-default.conf dan ubah nama menjadi file franky.a12.com.conf.
+
+```cp 000-default.conf franky.a12.com.conf```
+
+Edit file franky.a12.com.conf seperti gambar berikut ini:
+
+![8_1](https://user-images.githubusercontent.com/81466736/139531820-81fe9e90-f5f9-4eb4-8cbf-d8655fa08427.JPG)
+
+
+pada directory /var/www.
+```cd /var/www.```
+
+Download file zip yang telah diberikan : ```https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/franky.zip```
+dengan menggunakan wget ``` apt-get install wget -y ``` dan lakukan zip ``` apt-get install unzip -y ``` install aplikasi tersebut sebelumnya
+
+```unzip franky.zip```
+
+Rename folder franky menjadi franky.a12.com
+``` mv franky franky.a12.com ```
+
+
+Aktifkan konfigurasi pada franky.a12.com dengan command:
+
+```a2ensite franky.a12.com```
+
+lakukan restart pada apache
+
+``` service apache2 restart ```
+
+__pada Loguetown__
+
+install aplikasi lynx
+``` apt-get install lynx ```
+
+buka franky.a12.com dengan menggunakan lynx
+
+```lynx franky.a12.com```
+
+![8_3](https://user-images.githubusercontent.com/81466736/139532192-8551fd1d-2499-4b06-ba3b-4ff46afb948f.JPG)
+
+
+## Soal 9
+
+**Jawaban**
+
+Setelah itu, Luffy juga membutuhkan agar url www.franky.yyy.com/index.php/home dapat menjadi menjadi www.franky.yyy.com/home. 
+
+__Pada Skypie__
+
+tuliskan command 
+```a2enmod rewrite``` 
+untuk dapat mengaktifkan module rewrite.
+
+
+Restart apache dengan command 
+```service apache2 restart.```
+
+buat dan edit file baru .htaccess di folder /var/www/franky.a12.com seperti berikut :
+```vim /var/www/franky.a12.com/.htaccess```
+
+![image](https://user-images.githubusercontent.com/81466736/139532385-15eb6170-8203-40f3-be27-c97a0e248f73.png)
+
+pada directory 
+```/etc/apache2/sites-available.```
+
+edit file franky.a12.com.conf dan tambahkan beberapa line sebagai berikut agar file .htaccess yang tadi dibuat dapat diakses:
+```vim /etc/apache2/sites-available/franky.a12.com.conf```
+
+![image](https://user-images.githubusercontent.com/81466736/139532491-f5dc214f-1943-432d-841c-ead6a4851679.png)
+
+Restart apache dengan command 
+```service apache2 restart.```
+
+__pada Loguetown__
+
+buka franky.a12.com/home dengan menggunakan lynx
+
+```lynx franky.a12.com/home```
+
+![8_3](https://user-images.githubusercontent.com/81466736/139532532-2aa4fbb0-6965-48c6-a64b-8b7637a73bbf.JPG)
+
+
+## Soal 10
+Setelah itu, pada subdomain www.super.franky.yyy.com, Luffy membutuhkan penyimpanan aset yang memiliki DocumentRoot pada /var/www/super.franky.yyy.com
+
+
+**Jawaban**
+
+__pada console skype__ 
+masuk ke dalam directory :
+
+```cd /etc/apache2/sites-available.```
+
+
+Copy file 000-default.conf dan ubah nama menjadi file super.franky.a12.com.conf.
+
+```cp 000-default.conf super.franky.a12.com.conf```
+
+Edit file super.franky.a12.com.conf seperti gambar berikut ini:
+
+``` vim super.franky.a12.com.conf ```
+
+![10_1](https://user-images.githubusercontent.com/81466736/139532766-e10f7c89-4297-4988-bead-bd503a086beb.JPG)
+
+
+pada directory /var/www.
+```cd /var/www.```
+
+Download file zip yang telah diberikan : ```hwget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/super.franky.zip```
+dan lakukan unzip 
+
+```unzip super.franky.zip```
+
+Rename folder franky menjadi franky.a12.com
+``` mv super.franky super.franky.a12.com ```
+
+
+Aktifkan konfigurasi pada franky.a12.com dengan command:
+
+```a2ensite franky.a12.com```
+
+lakukan restart pada apache
+
+``` service apache2 restart ```
+
+__pada Loguetown__
+
+buka super.franky.a12.com dengan menggunakan lynx
+
+```lynx super.franky.a12.com```
+
+![10_2](https://user-images.githubusercontent.com/81466736/139532812-d41d28ac-1094-40b2-9580-c779832cb9ba.JPG)
+
+
+## Soal 11
+
+Akan tetapi, pada folder /public, Luffy ingin hanya dapat melakukan directory listing saja.
+
 
 
 
