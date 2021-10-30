@@ -193,6 +193,7 @@ Buat subdomain mecha.franky.yyy.com dengan alias www.mecha.franky.yyy.com yang d
 Buat subdomain melalui Water7 dengan nama general.mecha.franky.yyy.com dengan alias www.general.mecha.franky.yyy.com yang mengarah ke Skypie
 
 **Jawaban**
+### Pada Water7
 - Pada Water7 edit file ```/etc/bind/sunnygo/mecha.franky.a12.com``` sebagai berikut
 ![Screenshot (1920)](https://user-images.githubusercontent.com/71380876/139353234-4754addd-73ff-44e7-822c-479682fd1d5d.png)
 
@@ -207,6 +208,7 @@ Buat subdomain melalui Water7 dengan nama general.mecha.franky.yyy.com dengan al
 Setelah melakukan konfigurasi server, maka dilakukan konfigurasi Webserver. Pertama dengan webserver www.franky.yyy.com. Pertama, luffy membutuhkan webserver dengan DocumentRoot pada /var/www/franky.yyy.com.
 
 **Jawaban**
+### Pada Skype
 
 __pada console skype__ Install aplikasi apache, PHP, dan libapache2-mod-php7.0.
 
