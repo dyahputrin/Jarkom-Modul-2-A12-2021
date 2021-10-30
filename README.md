@@ -513,3 +513,12 @@ buka general.mecha.franky.a12.com:15000 dengan menggunakan lynx
  pada soal nomor 15 tidak dapat memasukkan new password untuk username luffy
  
  masih sering terjadi error sehingga sering mengulang konfigurasi dari awal dan tidak sempat mengerjakan nomor 16 dan 17
+ 
+ 
+ 
+ 
+ ## Kontribusi kelompok
+-   Fiqey Indriati Eka Sari (05111940000015) nomor 8-12
+-   Dyah Putri Nariswari (05111940000047) nomor 1-7
+-   Muhammad Farrel Abhinaya (05111940000173) nomor 13-17
+ 
